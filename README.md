@@ -1,1 +1,1 @@
-# image_geolocation_grep_tool
+``python3 main.py mori 6_2``
