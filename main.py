@@ -72,13 +72,12 @@ def get_args():
         magnification = args[2]
         if subject_type == "mori":
             # mori-----------------------------------
-            x, y = 35.387513, 139.424324
-            x_dash, y_dash = 35.388691, 139.425610
-            # 区分分けのみ　dash 35.389520, 139.425704
+            x, y = 35.389545, 139.424886
+            x_dash, y_dash = 35.390110, 139.425460
         elif subject_type == "buildings":
             # buildings-----------------------------
-            x, y = 35.387833, 139.426409
-            x_dash, y_dash = 35.388684, 139.427222
+            x, y = 35.388526, 139.426533
+            x_dash, y_dash = 35.388904, 139.427196
             # 区分分けのみ　dash 35.388606, 139.427699
         input_path = "./images/%s/" % magnification
         output_path = "./fit/%s/%s" % (subject_type, magnification)
