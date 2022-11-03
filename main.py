@@ -72,8 +72,8 @@ def get_args():
         magnification = args[2]
         if subject_type == "mori":
             # mori-----------------------------------
-            x, y = 35.389545, 139.424886
-            x_dash, y_dash = 35.390110, 139.425460
+            x, y = 35.389979, 139.424627
+            x_dash, y_dash = 35.390864, 139.426904
         elif subject_type == "buildings":
             # buildings-----------------------------
             x, y = 35.388526, 139.426533
