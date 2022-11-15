@@ -24,6 +24,7 @@ def get_latitude(file_name):
     proc = sp.Popen(latitude_cmd, shell=True, stdout=sp.PIPE, stderr=sp.PIPE)
     std_out, std_err = proc.communicate()
     latitude = std_out.decode('utf-8').rstrip()
+    print(file_name, latitude)
     return float(latitude)
 
 
@@ -42,7 +43,6 @@ def get_take_place(ls_file_name):
         latitude = get_latitude(file_name)
         longitude = get_longitude(file_name)
         take_place_list.append([file_name, latitude, longitude])
-        print(file_name, latitude, longitude)
     return take_place_list
 
 
@@ -72,13 +72,12 @@ def get_args():
         magnification = args[2]
         if subject_type == "mori":
             # mori-----------------------------------
-            x, y = 35.389979, 139.424627
-            x_dash, y_dash = 35.390864, 139.426904
+            x, y = 35.389545, 139.424886
+            x_dash, y_dash = 35.390110, 139.425460
         elif subject_type == "buildings":
             # buildings-----------------------------
             x, y = 35.388526, 139.426533
             x_dash, y_dash = 35.388904, 139.427196
-            # 区分分けのみ　dash 35.388606, 139.427699
         input_path = "./images/%s/" % magnification
         output_path = "./fit/%s/%s" % (subject_type, magnification)
     else:
