@@ -1,1 +1,5 @@
-``python3 main.py mori 6_2``
+```shell
+mkdir fit/mori/normal
+mkdir images/normal
+python3 main.py mori normal
+```

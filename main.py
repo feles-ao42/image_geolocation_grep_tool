@@ -56,9 +56,11 @@ def check_range(take_place_list):
 
 def copy_file(fit_list):
     global output_path
+    print("copy start")
     for fit_file in fit_list:
         photo_path = input_path + fit_file[0]
         copy_cmd = "cp %s %s" % (photo_path, output_path)
+        print("copy_cmd")
         proc = sp.Popen(copy_cmd, shell=True, stdout=sp.PIPE, stderr=sp.PIPE)
         std_out, std_err = proc.communicate()
         print(std_out.decode('utf-8').rstrip())
@@ -72,8 +74,8 @@ def get_args():
         magnification = args[2]
         if subject_type == "mori":
             # mori-----------------------------------
-            x, y = 35.389545, 139.424886
-            x_dash, y_dash = 35.390110, 139.425460
+            x, y = 35.388829, 139.426260
+            x_dash, y_dash = 35.390185, 139.426952
         elif subject_type == "buildings":
             # buildings-----------------------------
             x, y = 35.388526, 139.426533
